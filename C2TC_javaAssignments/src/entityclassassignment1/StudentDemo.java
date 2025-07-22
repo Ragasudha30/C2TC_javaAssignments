@@ -1,6 +1,6 @@
 package entityclassassignment1;
 
-public class StudentDetails {
+public class StudentDemo {
 
 	public static void main(String[] args) {
 		

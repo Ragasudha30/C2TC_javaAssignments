@@ -1,22 +1,18 @@
 package entityclassassignment2;
 
 public class ProductDemo {
-	
-	    public int productId;
-	    public String productName;
-	    public int price;
 
-	    public ProductDemo(int productId, String productName, int price) {
-	        this.productId = productId;
-	        this.productName = productName;
-	        this.price = price;
-	    }
+	public static void main(String[] args) {
+		    Product p1 = new Product(1, "Laptop", 75000);
+	        Product p2 = new Product(2, "Mobile", 20000);
+	        Product p3 = new Product(3, "Tablet", 15000);
+	        Product p4 = new Product(4, "Monitor", 12000);
 
-	    public void display() {
-	        System.out.println("Product ID: " + productId);
-	        System.out.println("Product Name: " + productName);
-	        System.out.println("Price: $" + price);
-	        System.out.println();
-	    }
-	
+	        System.out.println("Product Details:");
+	        p1.display();
+	        p2.display();
+	        p3.display();
+	        p4.display();
+	}
+
 }
