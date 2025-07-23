@@ -1,4 +1,4 @@
-package entityclassassignment2;
+package Assignment1.entityclassassignment2;
 
 public class ProductDemo {
 
