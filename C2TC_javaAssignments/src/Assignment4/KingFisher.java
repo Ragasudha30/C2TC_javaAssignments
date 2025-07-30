@@ -1,39 +1,35 @@
 package Assignment4;
 
-public class KingFisher implements Airfare{
-	 
-	    private int hours;
-	    private double costPerHour;
+public class KingFisher implements Airfare {
+    private Integer hours;
+    private Double costPerHour;
 
-	    // Default constructor
-	    public KingFisher() {}
+    public KingFisher() {}
 
-	    // Parameterized constructor
-	    public KingFisher(int hours, double costPerHour) {
-	        this.hours = hours;
-	        this.costPerHour = costPerHour;
-	    }
+    public KingFisher(Integer hours, Double costPerHour) {
+        this.hours = hours;
+        this.costPerHour = costPerHour;
+    }
 
-	    // Getters and Setters
-	    public int getHours() {
-	        return hours;
-	    }
+    public Integer getHours() {
+        return hours;
+    }
 
-	    public void setHours(int hours) {
-	        this.hours = hours;
-	    }
+    public void setHours(Integer hours) {
+        this.hours = hours;
+    }
 
-	    public double getCostPerHour() {
-	        return costPerHour;
-	    }
+    public Double getCostPerHour() {
+        return costPerHour;
+    }
 
-	    public void setCostPerHour(double costPerHour) {
-	        this.costPerHour = costPerHour;
-	    }
+    public void setCostPerHour(Double costPerHour) {
+        this.costPerHour = costPerHour;
+    }
 
-	    // Implement calculateAmount()
-	    public Double calculateAmount() {
-	        return hours * costPerHour;
-	    }
-
+    @Override
+    public Double calculateAmount() {
+        return hours * costPerHour * 4;
+    }
 }
+

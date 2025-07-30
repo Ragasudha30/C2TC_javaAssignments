@@ -1,37 +1,35 @@
 package Assignment4;
 
 public class Indigo implements Airfare {
-    private int hours;
-    private double costPerHour;
+    private Integer hours;
+    private Double costPerHour;
 
-    // Default constructor
     public Indigo() {}
 
-    // Parameterized constructor
-    public Indigo(int hours, double costPerHour) {
+    public Indigo(Integer hours, Double costPerHour) {
         this.hours = hours;
         this.costPerHour = costPerHour;
     }
 
-    // Getters and Setters
-    public int getHours() {
+    public Integer getHours() {
         return hours;
     }
 
-    public void setHours(int hours) {
+    public void setHours(Integer hours) {
         this.hours = hours;
     }
 
-    public double getCostPerHour() {
+    public Double getCostPerHour() {
         return costPerHour;
     }
 
-    public void setCostPerHour(double costPerHour) {
+    public void setCostPerHour(Double costPerHour) {
         this.costPerHour = costPerHour;
     }
 
-    // Implement calculateAmount()
+    @Override
     public Double calculateAmount() {
         return hours * costPerHour * 8;
     }
 }
+

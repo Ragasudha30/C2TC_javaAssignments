@@ -1,13 +1,34 @@
 package Assignment4;
 
+import java.util.Scanner;
+
 public class Executor {
     public static void main(String[] args) {
-        Airfare airIndia = new AirIndia(5, 1000.0);
-        Airfare kingFisher = new KingFisher(4, 800.0);
-        Airfare indigo = new Indigo(3, 700.0);
+        Scanner sc = new Scanner(System.in);
+        int choice = Integer.parseInt(sc.nextLine());
+        int hours = Integer.parseInt(sc.nextLine());
+        double costPerHour = Double.parseDouble(sc.nextLine());
 
-        System.out.println("AirIndia Amount: " + airIndia.calculateAmount());
-        System.out.println("KingFisher Amount: " + kingFisher.calculateAmount());
-        System.out.println("Indigo Amount: " + indigo.calculateAmount());
+        Airfare flight = null;
+
+        switch (choice) {
+            case 1:
+                flight = new AirIndia(hours, costPerHour);
+                break;
+            case 2:
+                flight = new KingFisher(hours, costPerHour);
+                break;
+            case 3:
+                flight = new Indigo(hours, costPerHour);
+                break;
+            default:
+                System.out.println("Invalid choice");
+                return;
+        }
+
+        // Round to 2 decimal places and print
+        double amount = flight.calculateAmount();
+        System.out.printf("%.2f\n", amount);
     }
 }
+
